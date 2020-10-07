@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AccountController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,18 +14,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('login');
-})->name('login');
+Route::group(['middleware' => 'visitors'], function () {
+    Route::get('/', [AccountController::class, 'getLogin'])->name('getLogin');
+    Route::post('/', [AccountController::class, 'processLogin'])->name('login');
 
-Route::get('/register', function () {
-    return view('register');
-})->name('register');
+    Route::get('/register', [AccountController::class, 'getRegister'])->name('getRegister');
+    Route::post('/register', [AccountController::class, 'postRegister'])->name('register');
+    Route::get('/forgot-password', function () {
+        return view('forgot-password');
+    })->name('forgot-password');
+});
 
-Route::get('/forgot-password', function () {
-    return view('forgot-password');
-})->name('forgot-password');
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::group(['middleware' => 'authentication'], function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+    Route::post('logout', [AccountController::class, 'logout'])->name('logout');
+});
