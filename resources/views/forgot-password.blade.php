@@ -47,7 +47,7 @@
                 </form>
 
                 <p class="mt-3 mb-1">
-                    Already a member ? <a href="{{ route('login') }}">Please Login</a>
+                    Already a member ? <a href="{{ route('getLogin') }}">Please Login</a>
                 </p>
             </div>
             <!-- /.login-card-body -->
