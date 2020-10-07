@@ -74,12 +74,12 @@
                 <div class="row">
                     <div class="col-md-6">
                         <p class="mb-1">
-                            <a href="forgot-password.html">Forgot password</a>
+                            <a href="{{ route('forgot-password') }}">Forgot password</a>
                         </p>
                     </div>
                     <div class="col-md-6">
                         <p class="mb-0">
-                            <a href="register.html" class="text-center">Create a new account</a>
+                            <a href="{{ route('register') }}" class="text-center">Create a new account</a>
                         </p>
                     </div>
                 </div>
