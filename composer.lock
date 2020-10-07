@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7b56bfb5d21eaae286e532c3ed2f8941",
+    "content-hash": "3dd091769b39e3b394aa32d4ad159a0b",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -109,6 +109,140 @@
                 }
             ],
             "time": "2020-08-18T23:57:15+00:00"
+        },
+        {
+            "name": "cartalyst/sentinel",
+            "version": "v5.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cartalyst/sentinel.git",
+                "reference": "9f7a8c6c27e00a5601c3f78e381cd4dcfee84321"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cartalyst/sentinel/zipball/9f7a8c6c27e00a5601c3f78e381cd4dcfee84321",
+                "reference": "9f7a8c6c27e00a5601c3f78e381cd4dcfee84321",
+                "shasum": ""
+            },
+            "require": {
+                "cartalyst/support": "^5.0",
+                "illuminate/support": "^8.0",
+                "php": "^7.3"
+            },
+            "require-dev": {
+                "cartalyst/php-cs-fixer-config": "^1.0",
+                "illuminate/cookie": "^8.0",
+                "illuminate/database": "^8.0",
+                "illuminate/events": "^8.0",
+                "illuminate/http": "^8.0",
+                "illuminate/session": "^8.0",
+                "mockery/mockery": "^1.0",
+                "phpunit/phpunit": "^9.0"
+            },
+            "suggest": {
+                "illuminate/database": "By default, Sentinel utilizes the powerful Illuminate database layer.",
+                "illuminate/events": "To hook into various events across Sentinel, we recommend using Illuminate's event dispatcher.",
+                "symfony/http-foundation": "Required for native implementations."
+            },
+            "type": "library",
+            "extra": {
+                "component": "package",
+                "branch-alias": {
+                    "dev-master": "5.0.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Cartalyst\\Sentinel\\Laravel\\SentinelServiceProvider"
+                    ],
+                    "aliases": {
+                        "Activation": "Cartalyst\\Sentinel\\Laravel\\Facades\\Activation",
+                        "Reminder": "Cartalyst\\Sentinel\\Laravel\\Facades\\Reminder",
+                        "Sentinel": "Cartalyst\\Sentinel\\Laravel\\Facades\\Sentinel"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Cartalyst\\Sentinel\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Cartalyst LLC",
+                    "email": "help@cartalyst.com",
+                    "homepage": "https://cartalyst.com"
+                }
+            ],
+            "description": "PHP 7.3+ Fully-featured Authentication & Authorization System",
+            "keywords": [
+                "auth",
+                "cartalyst",
+                "laravel",
+                "php",
+                "security"
+            ],
+            "time": "2020-09-12T19:42:21+00:00"
+        },
+        {
+            "name": "cartalyst/support",
+            "version": "v5.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cartalyst/support.git",
+                "reference": "976ea71efab17c8d50a485c8db9db0de5b49b3a5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cartalyst/support/zipball/976ea71efab17c8d50a485c8db9db0de5b49b3a5",
+                "reference": "976ea71efab17c8d50a485c8db9db0de5b49b3a5",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.3"
+            },
+            "require-dev": {
+                "cartalyst/php-cs-fixer-config": "^1.0",
+                "illuminate/mail": "^8.0",
+                "illuminate/validation": "^8.0",
+                "mockery/mockery": "^1.0",
+                "phpunit/phpunit": "^9.0",
+                "symfony/translation": "^5.1"
+            },
+            "type": "library",
+            "extra": {
+                "component": "package",
+                "branch-alias": {
+                    "dev-master": "5.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Cartalyst\\Support\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Cartalyst LLC",
+                    "email": "help@cartalyst.com",
+                    "homepage": "https://cartalyst.com"
+                }
+            ],
+            "description": "Support helpers.",
+            "keywords": [
+                "cartalyst",
+                "helper",
+                "laravel",
+                "support"
+            ],
+            "time": "2020-09-12T19:33:30+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
